@@ -18,14 +18,14 @@ class _HomeState extends State<Home> {
         child: Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.teal,
-            title: Text('Whatsapp', style: TextStyle(
+            title: const Text('Whatsapp', style: TextStyle(
               color: Colors.white
             ),
 
 
             ),
 
-            bottom: TabBar(tabs: [
+            bottom: const TabBar(tabs: [
               Icon(Icons.camera_alt_outlined),
               Text('Chats'),
               Text('Status'),
@@ -35,24 +35,24 @@ class _HomeState extends State<Home> {
 
             actions: [
 
-              Icon(Icons.search),
-              SizedBox( width: 10,),
+              const Icon(Icons.search),
+              const SizedBox( width: 10,),
               PopupMenuButton(
-                  icon: Icon(Icons.more_horiz_outlined),
+                  icon: const Icon(Icons.more_horiz_outlined),
                   itemBuilder: (context, )=> [
-                    PopupMenuItem(
+                    const PopupMenuItem(
                         value: 1,
                         child: Text('New Groups')),
 
-                    PopupMenuItem(
+                    const PopupMenuItem(
                         value: 2,
                         child: Text('Setting')),
 
-                    PopupMenuItem(
+                    const PopupMenuItem(
                         value: 1,
                         child: Text('Log Out')),
 
-                    PopupMenuItem(
+                    const PopupMenuItem(
                         value: 1,
                         child: Text('Linked Device')),
 
@@ -67,11 +67,11 @@ class _HomeState extends State<Home> {
             ),
           body: TabBarView(
             children: [
-              Text('Camera'),
+              const Text('Camera'),
               ListView.builder(
                   itemCount: 10,
                   itemBuilder: (context, index){
-                return ListTile(
+                return const ListTile(
                   leading: CircleAvatar(
                     backgroundImage: NetworkImage('https://scontent.fkhi6-1.fna.fbcdn.net/v/t39.30808-6/406491836_1148244699486961_5109299013588405121_n.jpg?stp=cp6_dst-jpg&_nc_cat=104&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeED9SbnVlUOymCaknJUdWf2aYHm5xJvFHBpgebnEm8UcBGIEAtNGNUaCYnZBdlYYSx4DO1wt6H7zOnDFJzwaSug&_nc_ohc=_CnEy1z8pzEAX8AjeBn&_nc_ht=scontent.fkhi6-1.fna&cb_e2o_trans=t&oh=00_AfD6W8BHZyZDlA18QqwCQXsnVoNxYTn3dTtHAQU3mmFv0g&oe=65A6A283'),
                   ),
@@ -96,12 +96,12 @@ class _HomeState extends State<Home> {
                             width: 4,
                           ),
                         ),
-                        child: CircleAvatar(
+                        child: const CircleAvatar(
                           backgroundImage: NetworkImage('https://scontent.fkhi6-1.fna.fbcdn.net/v/t39.30808-6/406491836_1148244699486961_5109299013588405121_n.jpg?stp=cp6_dst-jpg&_nc_cat=104&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeED9SbnVlUOymCaknJUdWf2aYHm5xJvFHBpgebnEm8UcBGIEAtNGNUaCYnZBdlYYSx4DO1wt6H7zOnDFJzwaSug&_nc_ohc=_CnEy1z8pzEAX8AjeBn&_nc_ht=scontent.fkhi6-1.fna&cb_e2o_trans=t&oh=00_AfD6W8BHZyZDlA18QqwCQXsnVoNxYTn3dTtHAQU3mmFv0g&oe=65A6A283'),
                         ),
                       ),
-                      title: Text('Mujahid'),
-                      subtitle: Text('30m ago '),
+                      title: const Text('Mujahid'),
+                      subtitle: const Text('30m ago '),
 
                     );
                   }),
@@ -113,10 +113,10 @@ class _HomeState extends State<Home> {
                   itemCount: 10,
                   itemBuilder: (context, index){
                     return ListTile(
-                      leading: CircleAvatar(
+                      leading: const CircleAvatar(
                         backgroundImage: NetworkImage('https://scontent.fkhi6-1.fna.fbcdn.net/v/t39.30808-6/406491836_1148244699486961_5109299013588405121_n.jpg?stp=cp6_dst-jpg&_nc_cat=104&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeED9SbnVlUOymCaknJUdWf2aYHm5xJvFHBpgebnEm8UcBGIEAtNGNUaCYnZBdlYYSx4DO1wt6H7zOnDFJzwaSug&_nc_ohc=_CnEy1z8pzEAX8AjeBn&_nc_ht=scontent.fkhi6-1.fna&cb_e2o_trans=t&oh=00_AfD6W8BHZyZDlA18QqwCQXsnVoNxYTn3dTtHAQU3mmFv0g&oe=65A6A283'),
                       ),
-                      title: Text('Mujahid'),
+                      title: const Text('Mujahid'),
                       subtitle: Text(index/2 ==0? 'You missed call' : 'call time is 12:30'),
                       trailing: Icon(index/2 ==0? Icons.call : Icons.video_camera_back),
                     );
